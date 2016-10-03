@@ -1,0 +1,22 @@
+div.allMakams {
+   width: 500px;
+    height: auto;
+       
+    float: left;
+}
+
+div.selectedMakams {
+    width: 150px;
+    height: auto;
+    float: right;
+}
+
+#credit {
+    position: fixed;
+    margin-bottom: 1px;
+}
+
+#playButton {
+    float: right;
+    margin-right: 120px;
+}

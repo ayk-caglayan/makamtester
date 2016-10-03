@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<!-- to report any problem please contact me at aykut_caglayan@yahoo.com -->
+<html>
+    
+<!-- <script type="text/javascript" src="script.js"> </script> -->
+   
+   
+    <!-- <script type="text/javascript" src="StartAudioContext.js"> </script> -->
+   
+    
+    
+    <head>
+          <title> Makam Testi </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+  
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"> </script>
+  
+   
+     <script type="text/javascript" src="https://tonejs.github.io/CDN/latest/Tone.js"> </script>
+    <script type="text/javascript" src="script.js">  </script>
+       <!-- <link rel="stylesheet" type="text/css" href="stylesheet.css"> -->
+    </head>
+    <body>
+      <!--  <button type="button" onclick="loadDoc()"> Take it! </button> -->
+        <br>
+        <!-- <button type="button" onclick="loadRandomFile()"> Click to hear a random song picked from selected makams </button>-->
+        <button type="button" onclick="loadRandomFile()" id="playButton"> <h3> Seçili makamlardan bir nağme çal </h3> </button>
+        <br>
+        <br>
+        <button type="button" onclick="reader.stop()"> Durdur! </button>
+        <div id="line"></div>
+        <br>
+        <br>
+        
+        <!-- <div id="result" class="result"> Choose some makams from the options below; you will try to name them by hearing </div> -->
+        <div id="result" class="result"> Aşağıdaki butonlara tıklayarak imtihana tabi tutulmak istediğiniz makamları seçiniz </div>
+        <br>
+        
+        <div id="selectedMakams" class="selectedMakams"> </div>
+        <br>
+        <!-- <div id="randomFileMonitor"> monitor </div> -->
+        
+        <br>
+        <h3> -___ tempo___ +  </h3>
+        <input type="range" id="tempo" value="50" onchange="changeTempo()" >
+        
+        <div id="line"> </div>
+        <div id="tempo_mul"> </div>
+        <br>
+        <br>
+       <h3> Makam seçiniz </h3> 
+         
+            
+        <div id="makam_names" class="allMakams"> </div>
+        
+         <br>
+        <br>
+        <br>
+         <br>
+        <br>
+        <br>
+        
+        <footer id="credit"> 
+        <p> Test aşamasındadır! Henüz mobil cihazlarda çalışmamaktadır. Chrome veya Firefox web tarayıcısı tavsiye olunur </p>
+            <p> <a href="http://aykutcaglayan.com"> Aykut Çağlayan </a> tarafından </p>
+            <p> Türk Müziği Veritabanı <a href="https://github.com/MTG/SymbTr">   'SymbTr' </a> sayesinde gerçekleştirilmiştir</p>
+        </footer>
+        
+    </body>
+</html>
