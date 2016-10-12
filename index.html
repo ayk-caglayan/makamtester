@@ -3,6 +3,11 @@
 <!-- to report any problem please contact me at aykut_caglayan@yahoo.com -->
 <html>
     
+<!-- <script type="text/javascript" src="script.js"> </script> -->
+   
+   
+    <!-- <script type="text/javascript" src="StartAudioContext.js"> </script> -->
+   
     
     
     <head>
@@ -14,17 +19,48 @@
   
    
      <script type="text/javascript" src="https://tonejs.github.io/CDN/latest/Tone.js"> </script>
+       <script type="text/javascript" src="StartAudioContext.js"> </script>
+                
     <script type="text/javascript" src="script.js">  </script>
-     
+<style> 
+    #playButton {
+        background-color: #4CAF50;
+        border: none;
+        border-radius: 4px;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 17px;
+        margin: 4px 2px;
+        cursor: pointer;
+    } 
+    
+    #stopButton {
+        background-color: #f44336;
+        border: none;
+        border-radius: 4px;
+        color: white;
+        padding: 10px 17px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 13px;
+        margin: 2px 1px;
+        cursor: pointer;
+    } 
+        </style>
     </head>
     <body>
-      
+      <!--  <button type="button" onclick="loadDoc()"> Take it! </button> -->
         <br>
-      
-        <button type="button" onclick="loadRandomFile()" id="playButton"> <h3> Seçili makamlardan bir nağme çal </h3> </button>
+        <!-- <button type="button" onclick="loadRandomFile()"> Click to hear a random song picked from selected makams </button>-->
+        
+        <button type="button" onclick="loadRandomFile()" id="playButton" > Seçili makamlardan bir nağme çal </button>
         <br>
         <br>
-        <button type="button" onclick="reader.stop()"> Durdur! </button>
+        <button type="button" onclick="reader.stop()" id="stopButton"> Durdur! </button>
         <div id="line"></div>
         <br>
         <br>
@@ -58,7 +94,7 @@
         <br>
         
         <footer id="credit"> 
-        <p> Test aşamasındadır! Henüz mobil cihazlarda çalışmamaktadır. Chrome veya Firefox web tarayıcısı tavsiye olunur </p>
+        <p> Test aşamasındadır! Son güncelleme: 12.10.2016 </p>
             <p> <a href="http://aykutcaglayan.com"> Aykut Çağlayan </a> tarafından </p>
             <p> Türk Müziği Veritabanı <a href="https://github.com/MTG/SymbTr">   'SymbTr' </a> sayesinde gerçekleştirilmiştir</p>
         </footer>
