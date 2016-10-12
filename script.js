@@ -13,6 +13,18 @@ var selected_makam_indexes=[];
 var selected_makam_names=[];
 var makam_being_played;
 var piece_being_played;
+
+$(function(){
+	
+	//mobile start
+	StartAudioContext.setContext(Tone.context);
+    StartAudioContext.on($("#makam_names"));
+    StartAudioContext.onStarted(function(){
+        console.log("Audio powered!");
+    });
+	
+});
+
 var reader = new Tone.Loop(function(time) {
     var line_to_array;
     if (file_to_array[reader_step]) {line_to_array = file_to_array[reader_step].split('\t')} else {reader.stop()}; 
@@ -48,7 +60,7 @@ var reader = new Tone.Loop(function(time) {
 }, 1);  
 
 Tone.Transport.start();
-Tone.startMobile();
+
 
 
 function midicps(midi) {
