@@ -13,9 +13,11 @@
     <head>
           <title> Makam Testi </title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 
   
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"> </script>
+        <script src="jquery.mobile.custom.js"> </script>
   
    
      <script type="text/javascript" src="https://tonejs.github.io/CDN/latest/Tone.js"> </script>
@@ -32,7 +34,7 @@
         text-align: center;
         text-decoration: none;
         display: inline-block;
-        font-size: 17px;
+        font-size: 23px;
         margin: 4px 2px;
         cursor: pointer;
     } 
@@ -46,7 +48,7 @@
         text-align: center;
         text-decoration: none;
         display: inline-block;
-        font-size: 13px;
+        font-size: 25px;
         margin: 2px 1px;
         cursor: pointer;
     } 
@@ -57,10 +59,10 @@
         <br>
         <!-- <button type="button" onclick="loadRandomFile()"> Click to hear a random song picked from selected makams </button>-->
         
-        <button type="button" onclick="loadRandomFile()" id="playButton" > Seçili makamlardan bir nağme çal </button>
+        <button type="button" class="ui-btn" onclick="loadRandomFile()" id="playButton" > Seçili makamlardan bir nağme çal </button>
         <br>
         <br>
-        <button type="button" onclick="reader.stop()" id="stopButton"> Durdur! </button>
+        <button type="button" class="ui-btn" onclick="reader.stop()" id="stopButton"> Durdur! </button>
         <div id="line"></div>
         <br>
         <br>
@@ -97,6 +99,7 @@
         <p> Test aşamasındadır! Son güncelleme: 12.10.2016 </p>
             <p> <a href="http://aykutcaglayan.com"> Aykut Çağlayan </a> tarafından </p>
             <p> Türk Müziği Veritabanı <a href="https://github.com/MTG/SymbTr">   'SymbTr' </a> sayesinde gerçekleştirilmiştir</p>
+            <p> İşbirliğinde bulunmak isterseniz <a href= https://github.com/mahatGma/makamtester> https://github.com/mahatGma/makamtester</a></p>
         </footer>
         
     </body>

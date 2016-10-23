@@ -13,9 +13,11 @@ var selected_makam_indexes=[];
 var selected_makam_names=[];
 var makam_being_played;
 var piece_being_played;
+var isMobile = false;
 
-$(function(){
-	
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+ isMobile = true; 
+    $(function(){
 	//mobile start
 	StartAudioContext.setContext(Tone.context);
     StartAudioContext.on($("#makam_names"));
@@ -24,6 +26,9 @@ $(function(){
     });
 	
 });
+};
+
+
 
 var reader = new Tone.Loop(function(time) {
     var line_to_array;
@@ -118,7 +123,12 @@ function loadMakamNamesSlots() {
                 //console.log(makamName);
                 
                 //creates buttons for each makam name
-                $('#makam_names').append("<button class='makamBut' id=" + makamName + " style='background-color:rgb(242, 242, 242); border-radius: 5px'>" + makamName +  "</button>")};
+                if (isMobile) {$('#makam_names').append("<button class='makamBut ui-btn ui-btn-inline' id=" + makamName + " style='background-color:rgb(242, 242, 242); border-radius: 5px'>" + makamName +  "</button>")} else {
+                    $('#makam_names').append("<button class='makamBut' id=" + makamName + " style='background-color:rgb(242, 242, 242); border-radius: 5px'>" + makamName +  "</button>")
+                };
+                
+               
+            };
         };
     };
     xhttp.send(null);
@@ -184,7 +194,7 @@ $(document).on('click', '.makamBut', function() {
     if (getColor == "rgb(242, 242, 242)") {
         $(this).css("background-color", "rgb(102, 255, 153)"); //change color to green
         
-        $('#selectedMakams').append("<button type='button' style='background-color:rgb(255, 255, 255); border-radius: 5px' class='makamSel' id=" + getID + ">" + getID + "</button>"); //create a .makamSel button//
+        $('#selectedMakams').append("<button type='button' style='background-color:rgb(255, 255, 255); border-radius: 5px' class='makamSel ui-btn ui-btn-inline' id=" + getID + ">" + getID + "</button>"); //create a .makamSel button//
         
         //add makamSlots to list
         for (var i=0; i < makamName_Index.length;i++) {
