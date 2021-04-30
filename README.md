@@ -1,5 +1,10 @@
 # makamtester
 
+running at
+
+https://aykutcaglayan.net/makamtester/
+
+
 utilizes SymbTr Turkish Music Database 
 https://github.com/MTG/SymbTr
 
